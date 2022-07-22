@@ -1,0 +1,18 @@
+<div class = "container">
+  <div class = "row">
+    <h1>View flats</h1>
+    <ul>
+      <% @flats.each do |flat|%>
+      <div class="col-lg-3 col-md-4 col-sm-12">
+        <div class="card">
+          <h2 class="card-title"><%= flat.name %></h2>
+          <h3><%= flat.address %></h3>
+          <p class="card-body"><%= flat.description %><p>
+          <i class="fa-solid fa-sterling-sign"></i> <%= flat.price_per_night %>
+          <i class="fa-solid fa-people-group"></i><%= flat.number_of_guests %>
+        </div>
+      </div>
+      <%end%>
+
+  </div>
+</div>
